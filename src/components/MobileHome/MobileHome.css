@@ -21,7 +21,8 @@ body:has(.mobile-home) .whatsapp-fab {
   isolation: isolate;
   animation:
     mobile-cta-pulse 2.8s ease-in-out infinite,
-    mobile-cta-glitch 6.4s steps(1, end) infinite;
+    mobile-cta-glitch 6.4s steps(1, end) infinite,
+    mobile-cta-text-glitch 7.5s steps(1, end) infinite;
   transition:
     transform 0.14s var(--ease-out),
     box-shadow 0.2s var(--ease-out);
@@ -121,6 +122,114 @@ body:has(.mobile-home) .whatsapp-fab {
   }
   65% {
     opacity: 0.6;
+  }
+}
+
+@keyframes mobile-cta-text-glitch {
+  0%,
+  32%,
+  34%,
+  74%,
+  76%,
+  100% {
+    text-shadow:
+      0 0 6px rgba(255, 255, 255, 0.55),
+      0 0 14px rgba(255, 255, 255, 0.28);
+  }
+  33% {
+    text-shadow:
+      -1px 0 rgba(255, 45, 63, 0.9),
+      1px 0 rgba(31, 162, 255, 0.9),
+      0 0 6px rgba(255, 255, 255, 0.45);
+  }
+  75% {
+    text-shadow:
+      -1.5px 0 rgba(255, 45, 63, 0.95),
+      1.5px 0 rgba(31, 162, 255, 0.95),
+      0 0 5px rgba(255, 255, 255, 0.35);
+  }
+}
+
+.mobile-home .cta-magnetic-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.mobile-home .cta-magnetic-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  padding: 2px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 300deg,
+    rgba(255, 255, 255, 0.7) 325deg,
+    #fff 345deg,
+    rgba(150, 200, 255, 0.65) 358deg,
+    transparent 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.75));
+  mix-blend-mode: screen;
+  animation: mobile-cta-arc 4.5s linear infinite;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.mobile-home .cta-magnetic-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  padding: 2px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    #050508 5deg,
+    #050508 28deg,
+    transparent 33deg,
+    transparent 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 4;
+  opacity: 0;
+  animation: mobile-cta-segment-out 8s steps(1, end) infinite;
+}
+
+@keyframes mobile-cta-arc {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mobile-cta-segment-out {
+  0%,
+  38%,
+  40%,
+  82%,
+  84%,
+  100% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  39% {
+    opacity: 1;
+    transform: rotate(48deg);
+  }
+  83% {
+    opacity: 1;
+    transform: rotate(210deg);
   }
 }
 
