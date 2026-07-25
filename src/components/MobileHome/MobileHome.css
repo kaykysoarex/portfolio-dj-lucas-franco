@@ -120,6 +120,11 @@ body:has(.mobile-home) .whatsapp-fab {
   pointer-events: none;
 }
 
+.mobile-home__eq .equalizer {
+  justify-content: flex-end;
+  padding-right: var(--space-sm);
+}
+
 .mobile-home__eq .equalizer__bar {
   animation:
     eq-bounce var(--duration, 0.8s) ease-in-out var(--delay, 0s) infinite alternate,
