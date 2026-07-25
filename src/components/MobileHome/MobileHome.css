@@ -82,10 +82,10 @@ body:has(.mobile-home) .whatsapp-fab {
 
 .mobile-home__logo {
   width: 78%;
-  min-width: 260px;
-  max-width: 420px;
+  min-width: 290px;
+  max-width: 450px;
   margin-top: auto;
-  transform: translateY(38vh);
+  transform: translateY(calc(38vh + 25px));
 }
 
 .mobile-home__logo picture,
@@ -150,6 +150,6 @@ body:has(.mobile-home) .whatsapp-fab {
 
 @media (max-height: 700px) {
   .mobile-home__logo {
-    max-width: 320px;
+    max-width: 350px;
   }
 }
