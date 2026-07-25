@@ -12,6 +12,57 @@ body:has(.mobile-home) .whatsapp-fab {
   display: none;
 }
 
+.mobile-home .cta-button--primary {
+  background: #050508;
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.35);
+  isolation: isolate;
+}
+
+.mobile-home .cta-button--primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: none;
+  transition: none;
+  background:
+    radial-gradient(120% 60% at 50% 0%, rgba(255, 255, 255, 0.08), transparent 60%),
+    radial-gradient(90% 120% at 0% 100%, rgba(255, 45, 63, 0.1), transparent 70%),
+    radial-gradient(90% 120% at 100% 100%, rgba(31, 162, 255, 0.1), transparent 70%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, transparent 45%);
+}
+
+.mobile-home .cta-button--primary:hover::before {
+  transform: none;
+}
+
+.mobile-home .cta-button--primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    90deg,
+    #ff2d3f 0%,
+    #ff2d3f 42%,
+    #8b568d 50%,
+    #1fa2ff 58%,
+    #1fa2ff 100%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  filter:
+    drop-shadow(-2px 0 6px rgba(255, 45, 63, 0.75))
+    drop-shadow(2px 0 6px rgba(31, 162, 255, 0.75));
+  pointer-events: none;
+  z-index: 1;
+}
+
 .mobile-home__photo {
   position: absolute;
   inset: 0;
