@@ -12,95 +12,6 @@ body:has(.mobile-home) .whatsapp-fab {
   display: none;
 }
 
-.mobile-home .cta-button--primary {
-  width: 100%;
-  height: 70px;
-  padding: 0 var(--space-md);
-  border-radius: 16px;
-  background: #050508;
-  color: #fff;
-  border: none;
-  font-size: var(--fs-body);
-  letter-spacing: 0.22em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-xs);
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
-  animation: cta-neon-bad-contact 5.5s steps(1, end) infinite;
-}
-
-.mobile-home .cta-button--primary::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  transform: none;
-  transition: none;
-  background:
-    radial-gradient(120% 60% at 50% 0%, rgba(255, 255, 255, 0.07), transparent 60%),
-    radial-gradient(90% 120% at 0% 100%, rgba(255, 45, 63, 0.1), transparent 70%),
-    radial-gradient(90% 120% at 100% 100%, rgba(31, 162, 255, 0.1), transparent 70%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, transparent 45%);
-}
-
-.mobile-home .cta-button--primary:hover::before {
-  transform: none;
-}
-
-.mobile-home .cta-button--primary::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 2px;
-  background: linear-gradient(
-    90deg,
-    #ff2d3f 0%,
-    #ff2d3f 42%,
-    #8b568d 50%,
-    #1fa2ff 58%,
-    #1fa2ff 100%
-  );
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  filter:
-    drop-shadow(-2px 0 6px rgba(255, 45, 63, 0.8))
-    drop-shadow(2px 0 6px rgba(31, 162, 255, 0.8));
-  pointer-events: none;
-  z-index: 1;
-}
-
-@keyframes cta-neon-bad-contact {
-  0%,
-  19%,
-  21%,
-  65%,
-  67%,
-  69%,
-  71%,
-  100% {
-    opacity: 1;
-    box-shadow:
-      0 0 10px rgba(255, 255, 255, 0.9),
-      0 0 24px var(--color-glow-red),
-      0 0 44px var(--color-glow-blue);
-  }
-  20%,
-  66%,
-  68%,
-  70% {
-    opacity: 0.28;
-    box-shadow: none;
-  }
-}
-
 .mobile-home__photo {
   position: absolute;
   inset: 0;
@@ -173,7 +84,8 @@ body:has(.mobile-home) .whatsapp-fab {
   width: 78%;
   min-width: 290px;
   max-width: 450px;
-  transform: translateY(4vh);
+  margin-top: auto;
+  transform: translateY(calc(38vh + 25px));
 }
 
 .mobile-home__logo picture,
@@ -183,18 +95,8 @@ body:has(.mobile-home) .whatsapp-fab {
 }
 
 .mobile-home__cta {
-  position: fixed;
-  top: 50%;
-  left: 48%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  width: 80vw;
-  z-index: 5;
-}
-
-.mobile-home__cta .cta-magnetic-wrap {
-  display: block;
-  width: 100%;
+  margin-top: auto;
+  padding-top: var(--space-lg);
 }
 
 .mobile-home__eq {
