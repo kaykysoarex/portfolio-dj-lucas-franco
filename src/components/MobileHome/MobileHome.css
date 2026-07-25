@@ -48,7 +48,7 @@ body:has(.mobile-home) .whatsapp-fab {
   border-radius: 50%;
   filter: blur(65px);
   mix-blend-mode: screen;
-  opacity: 0.68;
+  opacity: 0.82;
   animation: hero-glow-pulse 6s ease-in-out infinite;
 }
 
