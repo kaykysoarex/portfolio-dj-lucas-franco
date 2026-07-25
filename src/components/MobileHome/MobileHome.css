@@ -329,8 +329,8 @@ body:has(.mobile-home) .whatsapp-fab {
 }
 
 .mobile-home__cta {
-  margin-top: clamp(20px, 4vh, 48px);
-  padding-top: var(--space-lg);
+  margin-top: 5px;
+  padding-top: 0;
   transform: translateY(clamp(50px, 18vh, 170px));
 }
 
@@ -341,7 +341,7 @@ body:has(.mobile-home) .whatsapp-fab {
     transform: translateY(clamp(30px, 12vh, 90px));
   }
   .mobile-home__cta {
-    margin-top: clamp(14px, 3vh, 32px);
+    margin-top: 5px;
     transform: translateY(clamp(30px, 12vh, 90px));
   }
 }
@@ -353,7 +353,7 @@ body:has(.mobile-home) .whatsapp-fab {
     transform: translateY(clamp(20px, 8vh, 50px));
   }
   .mobile-home__cta {
-    margin-top: clamp(10px, 2vh, 20px);
+    margin-top: 5px;
     transform: translateY(clamp(20px, 8vh, 50px));
   }
 }
