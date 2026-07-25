@@ -116,7 +116,6 @@ body:has(.mobile-home) .whatsapp-fab {
   bottom: calc(var(--tabbar-height) + var(--safe-bottom));
   z-index: 121;
   height: 34px;
-  padding-inline: var(--space-2xs);
   opacity: 0.85;
   pointer-events: none;
 }
