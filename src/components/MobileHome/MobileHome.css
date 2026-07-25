@@ -123,8 +123,8 @@ body:has(.mobile-home) .whatsapp-fab {
 }
 
 .mobile-home__cta {
-  margin-top: auto;
-  padding-top: var(--space-lg);
+  margin-top: 30px;
+  transform: translateY(calc(38vh + 25px));
 }
 
 .mobile-home__eq {
