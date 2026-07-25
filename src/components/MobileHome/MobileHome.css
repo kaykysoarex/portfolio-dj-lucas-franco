@@ -15,6 +15,7 @@ body:has(.mobile-home) .whatsapp-fab {
 .mobile-home .cta-button--primary {
   background: #050508;
   color: #fff;
+  border-radius: 8px;
   text-shadow:
     0 0 6px rgba(255, 255, 255, 0.55),
     0 0 14px rgba(255, 255, 255, 0.28);
@@ -159,7 +160,7 @@ body:has(.mobile-home) .whatsapp-fab {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 999px;
+  border-radius: 8px;
   padding: 2px;
   background: conic-gradient(
     from 0deg,
