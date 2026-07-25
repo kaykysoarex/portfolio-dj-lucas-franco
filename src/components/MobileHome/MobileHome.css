@@ -8,6 +8,10 @@
   padding-bottom: calc(var(--tabbar-height) + var(--safe-bottom));
 }
 
+body:has(.mobile-home) .whatsapp-fab {
+  display: none;
+}
+
 .mobile-home__photo {
   position: absolute;
   inset: 0;
