@@ -15,8 +15,76 @@ body:has(.mobile-home) .whatsapp-fab {
 .mobile-home .cta-button--primary {
   background: #050508;
   color: #fff;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.35);
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.55),
+    0 0 14px rgba(255, 255, 255, 0.28);
   isolation: isolate;
+  animation: mobile-cta-pulse 2.8s ease-in-out infinite;
+}
+
+.mobile-home .cta-button__label {
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.mobile-home .cta-button__label::before,
+.mobile-home .cta-button__label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.mobile-home .cta-button__label::before {
+  left: 14px;
+  background: #ff2d3f;
+  box-shadow:
+    0 0 3px #fff,
+    0 0 8px #ff2d3f,
+    0 0 14px rgba(255, 45, 63, 0.7);
+  animation: mobile-cta-led 1.4s ease-in-out infinite alternate;
+}
+
+.mobile-home .cta-button__label::after {
+  right: 14px;
+  background: #1fa2ff;
+  box-shadow:
+    0 0 3px #fff,
+    0 0 8px #1fa2ff,
+    0 0 14px rgba(31, 162, 255, 0.7);
+  animation: mobile-cta-led 1.4s ease-in-out 0.7s infinite alternate;
+}
+
+@keyframes mobile-cta-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 14px rgba(255, 45, 63, 0.4),
+      0 0 28px rgba(31, 162, 255, 0.35),
+      0 20px 28px -10px rgba(31, 162, 255, 0.35),
+      0 30px 40px -14px rgba(255, 45, 63, 0.25);
+  }
+  50% {
+    box-shadow:
+      0 0 22px rgba(255, 45, 63, 0.65),
+      0 0 42px rgba(31, 162, 255, 0.55),
+      0 22px 32px -8px rgba(31, 162, 255, 0.55),
+      0 30px 48px -12px rgba(255, 45, 63, 0.4);
+  }
+}
+
+@keyframes mobile-cta-led {
+  from {
+    opacity: 0.55;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .mobile-home .cta-button--primary::before {
