@@ -349,6 +349,12 @@ body:has(.mobile-home) .whatsapp-fab {
 
 .mobile-home__eq .equalizer {
   justify-content: center;
+  gap: 6px;
+}
+
+.mobile-home__eq .equalizer__bar {
+  max-width: 10px;
+  min-width: 4px;
 }
 
 .mobile-home__eq .equalizer__bar {
