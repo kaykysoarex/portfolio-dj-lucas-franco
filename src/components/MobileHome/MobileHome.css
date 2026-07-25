@@ -5,7 +5,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding-bottom: calc(var(--tabbar-height) + var(--safe-bottom) + 34px + var(--space-xs));
+  padding-bottom: calc(var(--tabbar-height) + var(--safe-bottom));
 }
 
 body:has(.mobile-home) .whatsapp-fab {
@@ -332,52 +332,6 @@ body:has(.mobile-home) .whatsapp-fab {
   margin-top: clamp(20px, 4vh, 48px);
   padding-top: var(--space-lg);
   transform: translateY(clamp(50px, 18vh, 170px));
-}
-
-.mobile-home__eq {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: calc(var(--tabbar-height) + var(--safe-bottom));
-  z-index: 121;
-  height: 34px;
-  margin-top: 10px;
-  opacity: 0.85;
-  pointer-events: none;
-}
-
-.mobile-home__eq .equalizer {
-  justify-content: center;
-  gap: 6px;
-}
-
-.mobile-home__eq .equalizer__bar {
-  max-width: 6px;
-  min-width: 3px;
-}
-
-.mobile-home__eq .equalizer__bar {
-  animation:
-    eq-bounce var(--duration, 0.8s) ease-in-out var(--delay, 0s) infinite alternate,
-    mobile-home-eq-color 2.6s ease-in-out infinite;
-}
-
-@keyframes mobile-home-eq-color {
-  0%,
-  100% {
-    background: linear-gradient(180deg, var(--color-blue), var(--color-chrome));
-    filter: drop-shadow(0 0 4px var(--color-glow-blue));
-  }
-  50% {
-    background: linear-gradient(180deg, var(--color-red), var(--color-chrome));
-    filter: drop-shadow(0 0 4px var(--color-glow-red));
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .mobile-home__eq .equalizer__bar {
-    animation: none;
-  }
 }
 
 @media (max-height: 700px) {

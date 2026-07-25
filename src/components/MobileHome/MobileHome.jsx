@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { djData } from "../../data/djData";
 import Photo from "../Photo/Photo";
 import CtaButton from "../CtaButton/CtaButton";
-import AudioVisualizer from "../AudioVisualizer/AudioVisualizer";
 import PageShutter from "../PageShutter/PageShutter";
 import { useQuoteModal } from "../ContactModal/QuoteModalContext";
 import "./MobileHome.css";
@@ -50,10 +49,6 @@ export default function MobileHome() {
         >
           <CtaButton label={djData.hero.ctaLabel} onClick={openQuoteModal} />
         </motion.div>
-      </div>
-
-      <div className="mobile-home__eq" aria-hidden="true">
-        <AudioVisualizer bars={26} variant="subtle" />
       </div>
     </div>
   );
