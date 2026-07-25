@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <QuoteModalProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
         <a href="#main-content" className="skip-link">
           Pular para o conteúdo
         </a>
