@@ -5,7 +5,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding-bottom: calc(var(--tabbar-height) + var(--safe-bottom));
+  padding-bottom: calc(var(--tabbar-height) + var(--safe-bottom) + 34px + var(--space-xs));
 }
 
 body:has(.mobile-home) .whatsapp-fab {
@@ -110,15 +110,15 @@ body:has(.mobile-home) .whatsapp-fab {
 }
 
 .mobile-home__eq {
-  position: relative;
-  z-index: 2;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--tabbar-height) + var(--safe-bottom));
+  z-index: 121;
   height: 34px;
-  width: 60%;
-  max-width: 240px;
-  align-self: center;
-  transform: translateX(2%);
-  padding-bottom: var(--space-sm);
+  padding-inline: var(--space-2xs);
   opacity: 0.85;
+  pointer-events: none;
 }
 
 .mobile-home__eq .equalizer__bar {
