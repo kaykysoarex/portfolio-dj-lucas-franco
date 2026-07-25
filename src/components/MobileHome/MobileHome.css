@@ -43,27 +43,27 @@ body:has(.mobile-home) .whatsapp-fab {
 .mobile-home__glow {
   position: absolute;
   z-index: 1;
-  width: 60vw;
-  height: 60vw;
+  width: 80vw;
+  height: 80vw;
   border-radius: 50%;
-  filter: blur(65px);
+  filter: blur(55px);
   mix-blend-mode: screen;
-  opacity: 0.82;
+  opacity: 1;
   animation: hero-glow-pulse 6s ease-in-out infinite;
 }
 
 .mobile-home__glow--red {
-  top: -35%;
-  left: -40%;
-  background: var(--color-glow-red);
+  top: -25%;
+  left: -30%;
+  background: var(--color-red);
 }
 
 .mobile-home__glow--blue {
-  bottom: -15%;
-  right: -35%;
-  width: 65vw;
-  height: 65vw;
-  background: var(--color-glow-blue);
+  bottom: -10%;
+  right: -25%;
+  width: 85vw;
+  height: 85vw;
+  background: var(--color-blue);
   animation-delay: 1.2s;
 }
 
