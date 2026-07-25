@@ -12,6 +12,34 @@ body:has(.mobile-home) .whatsapp-fab {
   display: none;
 }
 
+.mobile-home .cta-button--primary {
+  animation: cta-neon-bad-contact 5.5s steps(1, end) infinite;
+}
+
+@keyframes cta-neon-bad-contact {
+  0%,
+  19%,
+  21%,
+  65%,
+  67%,
+  69%,
+  71%,
+  100% {
+    opacity: 1;
+    box-shadow:
+      0 0 10px rgba(255, 255, 255, 0.9),
+      0 0 24px var(--color-glow-red),
+      0 0 44px var(--color-glow-blue);
+  }
+  20%,
+  66%,
+  68%,
+  70% {
+    opacity: 0.28;
+    box-shadow: none;
+  }
+}
+
 .mobile-home__photo {
   position: absolute;
   inset: 0;
