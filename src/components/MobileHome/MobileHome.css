@@ -16,7 +16,7 @@ body:has(.mobile-home) .whatsapp-fab {
   background: #050508;
   color: #fff;
   border-radius: 8px;
-  padding: clamp(0.75rem, 2.2vh, 1.35rem) clamp(1.4rem, 6vw, 2.6rem);
+  padding: clamp(0.95rem, 2.6vh, 1.55rem) clamp(1.8rem, 7vw, 3rem);
   text-shadow:
     0 0 6px rgba(255, 255, 255, 0.55),
     0 0 14px rgba(255, 255, 255, 0.28);
@@ -43,7 +43,7 @@ body:has(.mobile-home) .whatsapp-fab {
 
 .mobile-home .cta-button__label {
   font-weight: 800;
-  font-size: clamp(0.82rem, 3.4vw, 1.05rem);
+  font-size: clamp(0.95rem, 4vw, 1.25rem);
   letter-spacing: 0.24em;
   text-transform: uppercase;
 }
@@ -316,8 +316,8 @@ body:has(.mobile-home) .whatsapp-fab {
 }
 
 .mobile-home__logo {
-  width: 78%;
-  max-width: clamp(240px, 65vw, 400px);
+  width: 88%;
+  max-width: clamp(280px, 75vw, 460px);
   margin-top: clamp(72px, 22vh, 190px);
   transform: translateY(clamp(50px, 18vh, 170px));
 }
@@ -336,7 +336,7 @@ body:has(.mobile-home) .whatsapp-fab {
 
 @media (max-height: 700px) {
   .mobile-home__logo {
-    max-width: clamp(200px, 55vh, 300px);
+    max-width: clamp(240px, 62vh, 340px);
     margin-top: clamp(40px, 10vh, 90px);
     transform: translateY(clamp(30px, 12vh, 90px));
   }
@@ -348,7 +348,7 @@ body:has(.mobile-home) .whatsapp-fab {
 
 @media (max-height: 500px) {
   .mobile-home__logo {
-    max-width: clamp(160px, 45vh, 240px);
+    max-width: clamp(190px, 52vh, 280px);
     margin-top: clamp(20px, 5vh, 50px);
     transform: translateY(clamp(20px, 8vh, 50px));
   }
