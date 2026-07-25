@@ -110,7 +110,7 @@
   width: 60%;
   max-width: 240px;
   align-self: center;
-  transform: translateX(-4%);
+  transform: translateX(2%);
   padding-bottom: var(--space-sm);
   opacity: 0.85;
 }
