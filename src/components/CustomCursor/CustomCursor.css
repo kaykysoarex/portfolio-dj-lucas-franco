@@ -1,0 +1,40 @@
+.custom-cursor__dot,
+.custom-cursor__ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  border-radius: 50%;
+  will-change: transform;
+}
+
+.custom-cursor__dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: var(--color-red);
+}
+
+.custom-cursor__ring {
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
+  border: 1px solid var(--color-blue);
+  transition: width 0.25s var(--ease-out), height 0.25s var(--ease-out), margin 0.25s var(--ease-out), border-color 0.25s;
+}
+
+.custom-cursor__ring.is-active {
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  border-color: var(--color-red);
+  background: rgba(255, 45, 63, 0.08);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor__dot,
+  .custom-cursor__ring {
+    display: none;
+  }
+}

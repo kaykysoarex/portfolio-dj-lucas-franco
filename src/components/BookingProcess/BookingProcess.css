@@ -1,0 +1,101 @@
+.booking__header {
+  max-width: 46ch;
+  margin-bottom: var(--space-2xl);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.booking__header[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.booking__title {
+  font-size: var(--fs-h1);
+  margin-top: var(--space-xs);
+}
+
+.booking__track {
+  position: relative;
+  padding-left: 2px;
+}
+
+.booking__line {
+  position: absolute;
+  left: 27px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.booking__line-fill {
+  position: absolute;
+  inset: 0;
+  transform-origin: top;
+  transform: scaleY(0);
+  background: linear-gradient(180deg, var(--color-red), var(--color-blue));
+}
+
+.booking__steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  counter-reset: step;
+}
+
+.booking-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: var(--space-md);
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+
+.booking-step[data-visible="true"] {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.booking-step__number {
+  position: relative;
+  z-index: 1;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  color: var(--color-muted);
+}
+
+.booking-step[data-visible="true"] .booking-step__number {
+  border-color: var(--color-blue);
+  color: var(--color-text);
+}
+
+.booking-step__title {
+  font-size: var(--fs-h3);
+  margin-bottom: var(--space-3xs);
+  padding-top: var(--space-2xs);
+}
+
+.booking-step__desc {
+  color: var(--color-muted);
+  font-size: var(--fs-body);
+  max-width: 46ch;
+}
+
+@media (min-width: 860px) {
+  .booking__track {
+    padding-left: var(--space-lg);
+  }
+  .booking__line {
+    left: calc(var(--space-lg) + 27px);
+  }
+}

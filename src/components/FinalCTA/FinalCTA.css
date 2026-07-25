@@ -1,0 +1,114 @@
+.final-cta {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--space-3xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 70vh;
+}
+
+.final-cta__photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.final-cta__photo picture,
+.final-cta__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.28;
+  filter: grayscale(0.2);
+}
+
+.final-cta__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(60% 60% at 50% 40%, rgba(8, 9, 12, 0.4), rgba(8, 9, 12, 0.96));
+}
+
+.final-cta__glow {
+  position: absolute;
+  z-index: 1;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  filter: blur(90px);
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  animation: hero-glow-pulse 7s ease-in-out infinite;
+}
+
+.final-cta__glow--red {
+  top: -10%;
+  left: -10%;
+  background: var(--color-glow-red);
+}
+
+.final-cta__glow--blue {
+  bottom: -10%;
+  right: -10%;
+  background: var(--color-glow-blue);
+  animation-delay: 1.6s;
+}
+
+.final-cta__eq {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 90px;
+  opacity: 0.35;
+  padding-inline: var(--container-padding);
+}
+
+.final-cta__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+}
+
+.final-cta__content[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.final-cta__headline {
+  font-size: var(--fs-h1);
+  max-width: 18ch;
+  text-transform: uppercase;
+}
+
+.final-cta__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--color-muted);
+}
+
+.final-cta__social {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  color: var(--color-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .final-cta__glow {
+    animation: none;
+  }
+}

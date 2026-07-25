@@ -1,0 +1,81 @@
+.cta-magnetic-wrap {
+  display: inline-block;
+  will-change: transform;
+  transition: transform 0.25s var(--ease-out);
+}
+
+.cta-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 1.05rem 2rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 44px;
+  color: var(--color-text);
+  border: 1px solid transparent;
+  transition: transform 0.15s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.cta-button--primary {
+  background: var(--color-text);
+  color: #0a0a0d;
+  animation: cta-pulse 2.6s ease-in-out infinite;
+}
+
+.cta-button--outline {
+  background: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.cta-button--whatsapp {
+  background: var(--color-whatsapp);
+  color: #06210f;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.55) 48%, transparent 66%);
+  transform: translateX(-120%);
+  transition: transform 0.65s var(--ease-out);
+}
+
+.cta-button:hover::before {
+  transform: translateX(120%);
+}
+
+.cta-button:active {
+  transform: scale(0.95);
+}
+
+.cta-button__icon {
+  flex-shrink: 0;
+}
+
+@keyframes cta-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 var(--color-glow-red), 0 0 22px 2px var(--color-glow-blue);
+  }
+  50% {
+    box-shadow: 0 0 26px 6px var(--color-glow-red), 0 0 38px 10px var(--color-glow-blue);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-button--primary {
+    animation: none;
+    box-shadow: 0 0 18px 2px var(--color-glow-blue);
+  }
+}

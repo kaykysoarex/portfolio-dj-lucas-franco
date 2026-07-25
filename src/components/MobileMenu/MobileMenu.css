@@ -1,0 +1,101 @@
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-header) - 1);
+  padding-top: calc(var(--header-height) + var(--safe-top));
+}
+
+.mobile-menu__panels {
+  position: absolute;
+  inset: 0;
+  display: flex;
+}
+
+.mobile-menu__panel {
+  flex: 1;
+  transform-origin: top;
+  background: var(--color-background);
+  border-right: 1px solid var(--color-border);
+}
+
+.mobile-menu__panel:nth-child(1) {
+  background: #0a0b10;
+}
+
+.mobile-menu__panel:nth-child(2) {
+  background: #08090c;
+}
+
+.mobile-menu__panel:nth-child(3) {
+  background: #0b0a0f;
+  border-right: none;
+}
+
+.mobile-menu__content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-lg) var(--container-padding);
+  padding-bottom: calc(var(--space-xl) + var(--safe-bottom));
+}
+
+.mobile-menu__content ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.mobile-menu__content a {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 10vw, 2.75rem);
+  font-weight: 700;
+  color: var(--color-text);
+  display: inline-block;
+}
+
+.mobile-menu__content a.is-active {
+  background: linear-gradient(90deg, var(--color-red), var(--color-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mobile-menu__cta {
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: var(--fs-small);
+  font-weight: 700;
+  background: var(--color-text);
+  color: #0a0a0d;
+  padding: 1rem 1.75rem;
+  border-radius: 999px;
+  min-height: 44px;
+}
+
+.mobile-menu__socials {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  color: var(--color-muted);
+}
+
+.mobile-menu__socials a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  display: grid;
+  place-items: center;
+}
+
+@media (min-width: 880px) {
+  .mobile-menu {
+    display: none;
+  }
+}

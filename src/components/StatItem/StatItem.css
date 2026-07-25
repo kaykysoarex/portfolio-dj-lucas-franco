@@ -1,0 +1,30 @@
+.stat-item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+
+.stat-item[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat-item__value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--fs-stat);
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(95deg, var(--color-text), var(--color-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat-item__label {
+  display: block;
+  margin-top: var(--space-2xs);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--color-muted);
+}

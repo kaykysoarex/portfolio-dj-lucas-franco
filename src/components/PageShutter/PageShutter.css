@@ -1,0 +1,43 @@
+.page-shutter {
+  position: fixed;
+  inset: 0;
+  z-index: 350;
+  pointer-events: none;
+}
+
+.page-shutter__panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 52%;
+  animation: page-shutter-open 0.55s var(--ease-in-out) forwards;
+}
+
+.page-shutter__panel--red {
+  top: 0;
+  transform-origin: top;
+  background: var(--color-red);
+}
+
+.page-shutter__panel--blue {
+  bottom: 0;
+  transform-origin: bottom;
+  background: var(--color-blue);
+  animation-delay: 0.05s;
+}
+
+@keyframes page-shutter-open {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-shutter__panel {
+    animation: none;
+    transform: scaleY(0);
+  }
+}

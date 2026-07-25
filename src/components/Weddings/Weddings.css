@@ -1,0 +1,96 @@
+.weddings {
+  position: relative;
+  background: var(--color-background-secondary);
+  overflow: hidden;
+}
+
+.weddings__wash {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 50% at 85% 20%, rgba(31, 162, 255, 0.14), transparent),
+    radial-gradient(50% 45% at 10% 85%, rgba(255, 45, 63, 0.1), transparent);
+  pointer-events: none;
+}
+
+.weddings__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.weddings__text {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.weddings__text[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.weddings__title {
+  font-size: var(--fs-h1);
+  max-width: 16ch;
+  margin-block: var(--space-xs) var(--space-md);
+}
+
+.weddings__desc {
+  color: var(--color-muted);
+  font-size: var(--fs-body-lg);
+  max-width: 46ch;
+  margin-bottom: var(--space-lg);
+}
+
+.weddings__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.weddings__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xs);
+  font-size: var(--fs-body);
+}
+
+.weddings__features svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--color-blue);
+}
+
+.weddings__photo {
+  position: relative;
+  max-width: 420px;
+  margin-inline: auto;
+  opacity: 0;
+  transform: translateY(24px) scale(0.97);
+  transition: opacity 0.8s var(--ease-out) 0.1s, transform 0.8s var(--ease-out) 0.1s;
+}
+
+.weddings__photo[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.weddings__photo picture,
+.weddings__photo img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+@media (min-width: 860px) {
+  .weddings__grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-2xl);
+  }
+  .weddings__photo {
+    margin-inline: 0;
+    margin-left: auto;
+  }
+}

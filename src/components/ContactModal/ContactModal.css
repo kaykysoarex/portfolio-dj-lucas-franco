@@ -1,0 +1,144 @@
+.quote-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  background: rgba(4, 4, 6, 0.78);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+  .quote-modal__backdrop {
+    align-items: center;
+    padding: var(--space-md);
+  }
+}
+
+.quote-modal {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  max-height: 92dvh;
+  overflow-y: auto;
+  background: var(--color-background-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: var(--space-lg) var(--space-md) calc(var(--space-lg) + var(--safe-bottom));
+}
+
+@media (min-width: 640px) {
+  .quote-modal {
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+}
+
+.quote-modal__close {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--color-muted);
+  transition: background 0.2s, color 0.2s;
+}
+
+.quote-modal__close:hover {
+  background: var(--color-background-secondary);
+  color: var(--color-text);
+}
+
+.quote-modal__title {
+  font-size: var(--fs-h3);
+  margin-top: var(--space-2xs);
+}
+
+.quote-modal__hint {
+  color: var(--color-muted);
+  font-size: var(--fs-small);
+  margin-top: var(--space-2xs);
+  margin-bottom: var(--space-md);
+}
+
+.quote-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.quote-field-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 480px) {
+  .quote-field-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.quote-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+  font-size: var(--fs-small);
+  color: var(--color-muted);
+}
+
+.quote-field input,
+.quote-field select,
+.quote-field textarea {
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 0.9rem;
+  color: var(--color-text);
+  font-size: var(--fs-body);
+  min-height: 44px;
+  transition: border-color 0.2s;
+}
+
+.quote-field input:focus,
+.quote-field select:focus,
+.quote-field textarea:focus {
+  border-color: var(--color-blue);
+}
+
+.quote-field textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.quote-modal__submit {
+  margin-top: var(--space-2xs);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  background: var(--color-whatsapp);
+  color: #06210f;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: var(--fs-small);
+  padding: 1rem;
+  border-radius: 999px;
+  min-height: 44px;
+  transition: transform 0.15s var(--ease-out), filter 0.2s;
+}
+
+.quote-modal__submit:hover {
+  filter: brightness(1.08);
+}
+
+.quote-modal__submit:active {
+  transform: scale(0.97);
+}

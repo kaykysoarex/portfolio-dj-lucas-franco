@@ -1,0 +1,38 @@
+.equalizer {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 100%;
+}
+
+.equalizer__bar {
+  flex: 1;
+  min-width: 2px;
+  max-width: 5px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--color-blue), var(--color-red));
+  height: 18%;
+  animation: eq-bounce var(--duration, 0.8s) ease-in-out var(--delay, 0s) infinite alternate;
+  opacity: 0.9;
+}
+
+.equalizer--subtle .equalizer__bar {
+  background: linear-gradient(180deg, var(--color-blue), var(--color-chrome));
+  opacity: 0.55;
+}
+
+@keyframes eq-bounce {
+  from {
+    height: 12%;
+  }
+  to {
+    height: 92%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .equalizer__bar {
+    animation: none;
+    height: 55%;
+  }
+}
