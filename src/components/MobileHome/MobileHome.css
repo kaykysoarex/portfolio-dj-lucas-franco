@@ -19,7 +19,9 @@ body:has(.mobile-home) .whatsapp-fab {
     0 0 6px rgba(255, 255, 255, 0.55),
     0 0 14px rgba(255, 255, 255, 0.28);
   isolation: isolate;
-  animation: mobile-cta-pulse 2.8s ease-in-out infinite;
+  animation:
+    mobile-cta-pulse 2.8s ease-in-out infinite,
+    mobile-cta-glitch 6.4s steps(1, end) infinite;
   transition:
     transform 0.14s var(--ease-out),
     box-shadow 0.2s var(--ease-out);
@@ -98,6 +100,27 @@ body:has(.mobile-home) .whatsapp-fab {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes mobile-cta-glitch {
+  0%,
+  22%,
+  24%,
+  62%,
+  64%,
+  66%,
+  68%,
+  100% {
+    opacity: 1;
+  }
+  23%,
+  63%,
+  67% {
+    opacity: 0.32;
+  }
+  65% {
+    opacity: 0.6;
   }
 }
 
