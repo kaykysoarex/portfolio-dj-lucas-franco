@@ -5,7 +5,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding-bottom: calc(var(--tabbar-height) + var(--safe-bottom) + 56px + var(--space-xs));
+  padding-bottom: calc(var(--tabbar-height) + var(--safe-bottom) + 34px + var(--space-xs));
 }
 
 body:has(.mobile-home) .whatsapp-fab {
@@ -342,7 +342,7 @@ body:has(.mobile-home) .whatsapp-fab {
   right: 0;
   bottom: calc(var(--tabbar-height) + var(--safe-bottom));
   z-index: 121;
-  height: 56px;
+  height: 34px;
   opacity: 0.85;
   pointer-events: none;
 }
