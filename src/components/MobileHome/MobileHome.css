@@ -39,24 +39,26 @@
 .mobile-home__glow {
   position: absolute;
   z-index: 1;
-  width: 80vw;
-  height: 80vw;
+  width: 60vw;
+  height: 60vw;
   border-radius: 50%;
   filter: blur(65px);
   mix-blend-mode: screen;
-  opacity: 0.45;
+  opacity: 0.55;
   animation: hero-glow-pulse 6s ease-in-out infinite;
 }
 
 .mobile-home__glow--red {
-  top: -20%;
-  left: -30%;
+  top: -35%;
+  left: -40%;
   background: var(--color-glow-red);
 }
 
 .mobile-home__glow--blue {
-  bottom: 10%;
-  right: -30%;
+  bottom: -15%;
+  right: -35%;
+  width: 65vw;
+  height: 65vw;
   background: var(--color-glow-blue);
   animation-delay: 1.2s;
 }
