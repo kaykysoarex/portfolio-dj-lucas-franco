@@ -155,33 +155,6 @@ body:has(.mobile-home) .whatsapp-fab {
   display: inline-block;
 }
 
-.mobile-home .cta-magnetic-wrap::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 999px;
-  padding: 2px;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    transparent 300deg,
-    rgba(255, 255, 255, 0.7) 325deg,
-    #fff 345deg,
-    rgba(150, 200, 255, 0.65) 358deg,
-    transparent 360deg
-  );
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.75));
-  mix-blend-mode: screen;
-  animation: mobile-cta-arc 4.5s linear infinite;
-  pointer-events: none;
-  z-index: 3;
-}
-
 .mobile-home .cta-magnetic-wrap::after {
   content: "";
   position: absolute;
@@ -205,12 +178,6 @@ body:has(.mobile-home) .whatsapp-fab {
   z-index: 4;
   opacity: 0;
   animation: mobile-cta-segment-out 8s steps(1, end) infinite;
-}
-
-@keyframes mobile-cta-arc {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes mobile-cta-segment-out {
