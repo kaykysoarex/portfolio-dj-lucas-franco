@@ -320,6 +320,7 @@ body:has(.mobile-home) .whatsapp-fab {
   min-width: 290px;
   max-width: 450px;
   margin-top: 22vh;
+  padding: 24px;
   transform: translateY(calc(38vh + 25px));
 }
 
