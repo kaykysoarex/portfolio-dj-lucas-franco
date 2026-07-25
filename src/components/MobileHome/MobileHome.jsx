@@ -4,11 +4,10 @@ import { djData } from "../../data/djData";
 import Photo from "../Photo/Photo";
 import CtaButton from "../CtaButton/CtaButton";
 import PageShutter from "../PageShutter/PageShutter";
-import { useQuoteModal } from "../ContactModal/QuoteModalContext";
+import { buildWhatsAppLink, defaultWhatsAppMessage } from "../../utils/whatsapp";
 import "./MobileHome.css";
 
 export default function MobileHome() {
-  const { openQuoteModal } = useQuoteModal();
 
   // "Contrate" no mobile é uma tela fixa, sem rolagem — trava o scroll do body
   // enquanto essa rota estiver ativa (evita rubber-band scroll no iOS).
@@ -47,7 +46,7 @@ export default function MobileHome() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
         >
-          <CtaButton label={djData.hero.ctaLabel} onClick={openQuoteModal} />
+          <CtaButton label={djData.hero.ctaLabel} href={buildWhatsAppLink(defaultWhatsAppMessage)} />
         </motion.div>
       </div>
     </div>
