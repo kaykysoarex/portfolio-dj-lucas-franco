@@ -319,7 +319,7 @@ body:has(.mobile-home) .whatsapp-fab {
   width: 78%;
   min-width: 290px;
   max-width: 450px;
-  margin-top: 22vh;
+  margin-top: 28vh;
   transform: translateY(calc(38vh + 25px));
 }
 
