@@ -353,8 +353,8 @@ body:has(.mobile-home) .whatsapp-fab {
 }
 
 .mobile-home__eq .equalizer__bar {
-  max-width: 10px;
-  min-width: 4px;
+  max-width: 6px;
+  min-width: 3px;
 }
 
 .mobile-home__eq .equalizer__bar {
