@@ -330,10 +330,9 @@ body:has(.mobile-home) .whatsapp-fab {
 }
 
 .mobile-home__cta {
-  margin-top: auto;
-  margin-bottom: 72px;
+  margin-top: 40px;
   padding-top: var(--space-lg);
-  transform: translateY(-50px);
+  transform: translateY(calc(38vh + 25px));
 }
 
 .mobile-home__eq {
