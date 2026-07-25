@@ -94,16 +94,6 @@ body:has(.mobile-home) .whatsapp-fab {
   height: auto;
 }
 
-.mobile-home__tagline {
-  margin-top: var(--space-sm);
-  font-family: var(--font-mono);
-  font-size: var(--fs-eyebrow);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-text);
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
-}
-
 .mobile-home__cta {
   margin-top: auto;
   padding-top: var(--space-lg);

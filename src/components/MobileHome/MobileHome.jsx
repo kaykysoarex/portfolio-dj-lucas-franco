@@ -42,15 +42,6 @@ export default function MobileHome() {
           <Photo name="logo" alt={`${djData.brand.name} — logotipo`} loading="eager" fetchPriority="high" />
         </motion.div>
 
-        <motion.p
-          className="mobile-home__tagline"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.85 }}
-        >
-          {djData.hero.eyebrow}
-        </motion.p>
-
         <motion.div
           className="mobile-home__cta"
           initial={{ opacity: 0, y: 14 }}
