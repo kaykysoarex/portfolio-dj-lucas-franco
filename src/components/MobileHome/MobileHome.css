@@ -13,7 +13,9 @@ body:has(.mobile-home) .whatsapp-fab {
 }
 
 .mobile-home .cta-button--primary {
-  background: #050508;
+  background: rgba(10, 10, 14, 0.28);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
   color: #fff;
   border-radius: 8px;
   padding: clamp(0.95rem, 2.6vh, 1.55rem) clamp(1.8rem, 7vw, 3rem);
@@ -35,10 +37,8 @@ body:has(.mobile-home) .whatsapp-fab {
   transform: scale(0.94);
   box-shadow:
     0 0 26px rgba(255, 255, 255, 0.55),
-    0 0 34px rgba(255, 45, 63, 0.85),
-    0 0 60px rgba(31, 162, 255, 0.8),
-    0 22px 36px -8px rgba(31, 162, 255, 0.6),
-    0 30px 52px -12px rgba(255, 45, 63, 0.5);
+    0 22px 36px -8px rgba(0, 0, 0, 0.7),
+    0 30px 52px -12px rgba(0, 0, 0, 0.6);
 }
 
 .mobile-home .cta-button__label {
@@ -62,21 +62,21 @@ body:has(.mobile-home) .whatsapp-fab {
 
 .mobile-home .cta-button__label::before {
   left: 14px;
-  background: #ff2d3f;
+  background: #fff;
   box-shadow:
     0 0 3px #fff,
-    0 0 8px #ff2d3f,
-    0 0 14px rgba(255, 45, 63, 0.7);
+    0 0 8px rgba(255, 255, 255, 0.7),
+    0 0 14px rgba(255, 255, 255, 0.45);
   animation: mobile-cta-led 1.4s ease-in-out infinite alternate;
 }
 
 .mobile-home .cta-button__label::after {
   right: 14px;
-  background: #1fa2ff;
+  background: #fff;
   box-shadow:
     0 0 3px #fff,
-    0 0 8px #1fa2ff,
-    0 0 14px rgba(31, 162, 255, 0.7);
+    0 0 8px rgba(255, 255, 255, 0.7),
+    0 0 14px rgba(255, 255, 255, 0.45);
   animation: mobile-cta-led 1.4s ease-in-out 0.7s infinite alternate;
 }
 
@@ -84,17 +84,17 @@ body:has(.mobile-home) .whatsapp-fab {
   0%,
   100% {
     box-shadow:
-      0 0 14px rgba(255, 45, 63, 0.4),
-      0 0 28px rgba(31, 162, 255, 0.35),
-      0 20px 28px -10px rgba(31, 162, 255, 0.35),
-      0 30px 40px -14px rgba(255, 45, 63, 0.25);
+      0 0 14px rgba(0, 0, 0, 0.5),
+      0 0 28px rgba(0, 0, 0, 0.4),
+      0 20px 28px -10px rgba(0, 0, 0, 0.45),
+      0 30px 40px -14px rgba(0, 0, 0, 0.35);
   }
   50% {
     box-shadow:
-      0 0 22px rgba(255, 45, 63, 0.65),
-      0 0 42px rgba(31, 162, 255, 0.55),
-      0 22px 32px -8px rgba(31, 162, 255, 0.55),
-      0 30px 48px -12px rgba(255, 45, 63, 0.4);
+      0 0 22px rgba(0, 0, 0, 0.7),
+      0 0 42px rgba(0, 0, 0, 0.55),
+      0 22px 32px -8px rgba(0, 0, 0, 0.6),
+      0 30px 48px -12px rgba(0, 0, 0, 0.45);
   }
 }
 
@@ -141,14 +141,14 @@ body:has(.mobile-home) .whatsapp-fab {
   }
   33% {
     text-shadow:
-      -1px 0 rgba(255, 45, 63, 0.9),
-      1px 0 rgba(31, 162, 255, 0.9),
+      -1px 0 rgba(255, 255, 255, 0.9),
+      1px 0 rgba(255, 255, 255, 0.9),
       0 0 6px rgba(255, 255, 255, 0.45);
   }
   75% {
     text-shadow:
-      -1.5px 0 rgba(255, 45, 63, 0.95),
-      1.5px 0 rgba(31, 162, 255, 0.95),
+      -1.5px 0 rgba(255, 255, 255, 0.95),
+      1.5px 0 rgba(255, 255, 255, 0.95),
       0 0 5px rgba(255, 255, 255, 0.35);
   }
 }
@@ -211,14 +211,19 @@ body:has(.mobile-home) .whatsapp-fab {
   transform: none;
   transition: none;
   background:
-    radial-gradient(120% 60% at 50% 0%, rgba(255, 255, 255, 0.08), transparent 60%),
-    radial-gradient(90% 120% at 0% 100%, rgba(255, 45, 63, 0.1), transparent 70%),
-    radial-gradient(90% 120% at 100% 100%, rgba(31, 162, 255, 0.1), transparent 70%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, transparent 45%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.04) 40%, transparent 55%),
+    radial-gradient(140% 70% at 50% 0%, rgba(255, 255, 255, 0.12), transparent 65%),
+    linear-gradient(180deg, transparent 55%, rgba(255, 255, 255, 0.06) 100%);
 }
 
 .mobile-home .cta-button--primary:hover::before {
   transform: none;
+}
+
+@property --neon-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
 .mobile-home .cta-button--primary::after {
@@ -227,13 +232,19 @@ body:has(.mobile-home) .whatsapp-fab {
   inset: 0;
   border-radius: inherit;
   padding: 2px;
-  background: linear-gradient(
-    90deg,
-    #ff2d3f 0%,
-    #ff2d3f 42%,
-    #8b568d 50%,
-    #1fa2ff 58%,
-    #1fa2ff 100%
+  background: conic-gradient(
+    from var(--neon-angle),
+    rgba(14, 26, 46, 0) 0deg,
+    rgba(14, 26, 46, 0) 210deg,
+    rgba(44, 74, 112, 0.55) 260deg,
+    rgba(120, 150, 190, 0.85) 305deg,
+    #c5d3e0 335deg,
+    #e8eef4 355deg,
+    #c5d3e0 15deg,
+    rgba(120, 150, 190, 0.75) 40deg,
+    rgba(44, 74, 112, 0.4) 80deg,
+    rgba(14, 26, 46, 0) 130deg,
+    rgba(14, 26, 46, 0) 360deg
   );
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
@@ -241,10 +252,24 @@ body:has(.mobile-home) .whatsapp-fab {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   filter:
-    drop-shadow(-2px 0 6px rgba(255, 45, 63, 0.75))
-    drop-shadow(2px 0 6px rgba(31, 162, 255, 0.75));
+    drop-shadow(0 0 4px rgba(197, 211, 224, 0.85))
+    drop-shadow(0 0 10px rgba(44, 74, 112, 0.7));
   pointer-events: none;
   z-index: 1;
+  animation: mobile-cta-neon-rotate 5s linear infinite;
+}
+
+@keyframes mobile-cta-neon-rotate {
+  to {
+    --neon-angle: 360deg;
+  }
+}
+
+@supports not (background: conic-gradient(from 0deg, #fff, #fff)) {
+  .mobile-home .cta-button--primary::after {
+    background: linear-gradient(90deg, #0e1a2e, #c5d3e0, #0e1a2e);
+    animation: none;
+  }
 }
 
 .mobile-home__photo {

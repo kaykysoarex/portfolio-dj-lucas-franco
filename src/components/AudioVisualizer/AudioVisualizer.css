@@ -17,8 +17,9 @@
 }
 
 .equalizer--subtle .equalizer__bar {
-  background: linear-gradient(180deg, var(--color-blue), var(--color-chrome));
-  opacity: 0.55;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.35));
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.35);
+  opacity: 0.45;
 }
 
 @keyframes eq-bounce {
